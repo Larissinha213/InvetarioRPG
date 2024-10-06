@@ -35,7 +35,7 @@ function adminLogin() {
   const adminUsername = document.getElementById("admin-username").value;
   const adminPassword = document.getElementById("admin-password").value;
 
-  if (adminUsername === "admin" && adminPassword === "1234") {
+  if (adminUsername === "Elijah" && adminPassword === "Elijah321") {
     document.getElementById("admin-login-section").style.display = "none";
     document.getElementById("admin-panel").style.display = "block";
     document.getElementById("admin-login-message").textContent = "";
