@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inventário RPG</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Inventário RPG</h1>
+
+      <div id="login-section">
+        <h2>Login</h2>
+        <button onclick="showAdminLogin()">Login como Administrador</button>
+        <button onclick="showPlayerLogin()">Login como Jogador</button>
+      </div>
+
+      <div id="admin-login-section" style="display: none">
+        <h2>Login Administrador</h2>
+        <input type="text" id="admin-username" placeholder="Nome de usuário" />
+        <input type="password" id="admin-password" placeholder="Senha" />
+        <button onclick="adminLogin()">Entrar</button>
+        <button onclick="goBackToLogin()">Voltar ao Início</button>
+        <p id="admin-login-message"></p>
+      </div>
+
+      <div id="player-login-section" style="display: none">
+        <h2>Login Jogador</h2>
+        <input type="text" id="player-username" placeholder="Nome de usuário" />
+        <input type="password" id="player-password" placeholder="Senha" />
+        <button onclick="playerLogin()">Entrar</button>
+        <button onclick="goBackToLogin()">Voltar ao Início</button>
+        <p id="player-login-message"></p>
+      </div>
+
+      <div id="admin-panel" style="display: none">
+        <h2>Painel do Administrador</h2>
+        <h3>Registrar Jogador</h3>
+        <input
+          type="text"
+          id="new-player-username"
+          placeholder="Nome de usuário"
+        />
+        <input type="password" id="new-player-password" placeholder="Senha" />
+        <button onclick="registerPlayer()">Registrar</button>
+        <p id="register-message"></p>
+
+        <h3>Adicionar Item ao Jogador</h3>
+        <select id="players-list"></select>
+        <input type="text" id="item" placeholder="Nome do item" />
+        <input type="number" id="quantity" placeholder="Quantidade" min="1" />
+        <button onclick="addItemToPlayer()">Adicionar Item</button>
+        <p id="add-item-message"></p>
+
+        <h3>Inventário dos Jogadores</h3>
+        <ul id="admin-player-inventory"></ul>
+        <button onclick="adminLogout()">Sair do Painel</button>
+      </div>
+
+      <div id="player-inventory-section" style="display: none">
+        <h2>Seu Inventário</h2>
+        <ul id="player-inventory-list"></ul>
+        <button onclick="playerLogout()">Sair</button>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
